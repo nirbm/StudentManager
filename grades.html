@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nir and Guy and Aluma styles</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/gradesStyle.css" />
+	<script src="js/gradesEvents.js"></script>
+
+
+</head>
+<body>
+    <div id="wrapper">
+		<!-- begin content-->
+		<div id="insertDiv">
+			<span style="color:#b0e8dc ; font-size: 80%;"> אנא הזן ציון: </span><br>
+			<table>
+				<tr>
+					<td> שם הקורס: </td>
+					<td>	<input id="CourseName" type ="string" required maxlength="20"/> </td>
+					<td>	ציון סופי: </td>
+						<td><input id="FinalGrade" required maxlength="20"/></td>
+					<td>נקודות זכות:</td> <td>
+					<input id="Credits" required maxlength="20"/></td>
+					<td> <button value = "okay"  id ="btnInsert" onclick = insertClick() > הוסף ציון </button></td>
+					</tr>
+					<tr>
+					<td ><button value = "delete_all"  id ="clearLocStor" onclick = ClearLocalStorage() >מחק הכל</button></td>
+					<td colspan='5'>
+						<canvas id="canvas" width="500" height ="40" > </canvas>
+					</td>
+				    <td id="scoreBoard" >
+
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="contentDiv">
+			<table id = "gradesTable">
+				<tbody>
+					<tr><td width="50">פעיל</td><td>שם מקצוע</td><td>ציון סופי</td><td>נקודות זכות</td><td colspan="2"> שינוי</td></tr>
+				</tbody>
+			</table>
+		</div>
+		 <!-- end of wrapper-->
+		</div>
+</body>
+</html>

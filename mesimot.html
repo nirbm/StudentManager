@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+<head>
+
+<title>Nir and Guy and Aluma styles</title>
+
+	<meta charset='utf-8' />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+	<link href="css/calendar.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/tasksStyle.css" />
+	<script src="js/events.js" charset='utf-8'></script>
+
+</head>
+<body>
+    <div id="wrapper">
+		<div id="insertDiv">
+			<table>
+				<tr>
+					<td> שם הקורס: </td>
+					<td>	<input id="CourseName" type ="string" required maxlength="20"/> </td>
+					<td>	מספר משימה:</td>
+					<td><input id="MissionId" type = "number" min = "1" required maxlength="20"/></td>
+					<td>תאריך הגשה</td> <td>
+					<input id="FinalDate"  type = "date" placeholder = "dd/mm/yyyy" required maxlength="20"/></td>
+					<td>  <button value = "okay"  id ="btnInsert" onclick = insertClick()> הוסף משימה </button></td>
+				</tr>
+
+			</table>
+			<tr>
+
+				<td > <button value = "clearLocStor"  id ="clearLocStor" onclick = ClearListLocalStorage()>מחק הכל</button> </td>
+			</tr>
+		</div>
+
+		<div id = "divMainLists">
+			<div id = "divNotDoneList">
+				<table id = "missionTable">
+					<tbody>
+					<tr><td width="50"><button value = "dateSort"  id ="sortDone" onclick = sort(1) >מיין באבי</button></td>
+						<td><button value = "ABCSort"  id ="Sort_A-B_NotDone" onclick = sort(3)>שם הקורס </button></td>
+						<td><button value = "IdSort"  id ="IdSort" onclick = sort(2)>תרגיל מספר</button></td>
+						<td><button value = "dateSort"  id ="dateDontNotDone" onclick = sort(0)>תאריך הגשה </button></td>
+						<td  id = "deleteButtonMain"> מחק</td>
+						<td> ערוך </td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		</div>
+		<div id="contentDiv">
+		</div>
+		
+</body>
+</html>
